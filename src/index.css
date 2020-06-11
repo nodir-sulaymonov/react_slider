@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #E5E5E5;
+    border:none;
+    width: 200px;
+}
+.buttonModal{
+    position: relative;
+    margin: 10px auto;
+    background-color: #229FFF;
+    color:white;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor:pointer;
+    font-size: 15px;
+    font-weight:bold;
+    width: 70%;
+}
+.buttonModal::after{
+     background-color: white;
+     border-radius: 50%;
+     left: 10px;
+     top:24px;
+     transform: translateY(-50%);
+     position: absolute;
+     content:'';
+     height:30px;
+     width:30px;
+     z-index: 1;
+}
+.activation{
+    border-radius: 20px;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    background-color: #229FFF;
+    color: white;
+    width: 200px;
+}
+.slideItem{
+    background-color: aquamarine;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-grow: 1;
+
+}
+@media screen and (max-width: 750px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

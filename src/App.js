@@ -12,7 +12,7 @@ function App() {
         <Header/>
         <section>
             <ActivitionCode/>
-            <ListPlayer/>
+            {/*<ListPlayer/>*/}
         </section>
       <FooterBanner/>
     </div>

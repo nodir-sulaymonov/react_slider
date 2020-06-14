@@ -1,31 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import './index.css';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import {Form} from "react-bootstrap";
 
 const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 10%;
-`;
-
-const BannerStyled = styled.div`
-    display: flex;
-    font-size: 80px;
-    font-weight: bold;
     text-align: center;
 `;
 
-const FormStyled = styled.div`
-    display: flex;
-    flex-direction: row;
+const BannerStyled = styled.div`
+    font-size: 80px;
+    font-weight: bold;
+    @media screen and (max-width: 650px) {
+        font-size:35px;
+}
 `;
-const InputWrapper = styled.div`
-    display: flex;
-    padding: 15px;
-    margin-left: 20px;
-`;
+
 
 class ActivitionCode extends React.Component {
     constructor(props) {
@@ -47,26 +40,28 @@ class ActivitionCode extends React.Component {
     render() {
         return (
             <Wrapper>
-                <BannerStyled>
-                    Активируйте ваш код
-                </BannerStyled>
-                <form onSubmit={this.onSubmit}>
-                    <FormStyled>
-                        <InputWrapper>
-                            <input
-                                type="text"
-                                name="code"
-                                id="code"
-                                placeholder="Введите код"
-                                value={this.state.code}
-                                onChange={this.handleThemeChange}
-                            />
-                        </InputWrapper>
-                        <InputWrapper>
-                            <button className="activation" type="submit">Продолжить</button>
-                        </InputWrapper>
-                    </FormStyled>
-                </form>
+                <Container>
+                        <BannerStyled>
+                            Активируйте ваш код
+                        </BannerStyled>
+                        <Form onSubmit={this.onSubmit}>
+                            <div className="form-row">
+                                <div className="form-group col-md-6" >
+                                    <input
+                                        type="text"
+                                        name="code"
+                                        id="code"
+                                        placeholder="Введите код"
+                                        value={this.state.code}
+                                        onChange={this.handleThemeChange}
+                                    />
+                                </div>
+                                <div className="form-group col-md-6">
+                                    <button className="activation" type="submit">Продолжить</button>
+                                </div>
+                            </div>
+                        </Form>
+                </Container>
             </Wrapper>
         )
     }

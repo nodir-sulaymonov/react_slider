@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Modal from 'react-awesome-modal';
 import styled from "styled-components";
 import './index.css';
+import Button from "react-bootstrap/Button";
+
 const WrapperModel = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
     text-align: center;
-    margin: 12%;
+    margin: 5%;
 `;
 
 export default class Examples extends Component {
@@ -33,7 +35,7 @@ export default class Examples extends Component {
     render() {
         return (
             <section>
-                <button type="button"  value="Open" onClick={() => this.openModal()}>ВОЙТИ</button>
+                <Button variant="secondary" ovalue="Open" onClick={() => this.openModal()}>Primary</Button>
                 <Modal
                     visible={this.state.visible}
                     width="400"

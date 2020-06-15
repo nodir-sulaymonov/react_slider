@@ -1,62 +1,48 @@
 import React from "react";
-import styled from "styled-components";
 import ModalButton from "./ModalButton";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import "./index.css";
 
-const HeaderStyled = styled.header`
-    padding: 30px;
-    background-color: #229FFF;
-    @media screen and (max-width: 650px) {
-        width: auto;
-        font-size:10px;
+const NavItem = props => {
+    const pageURI = window.location.pathname + window.location.search
+    const liClassName = (props.path === pageURI) ? "nav-item active" : "nav-item";
+    return (
+        <li className={liClassName}>
+            <a href={props.path} className="nav-link" id="brand">
+                {props.name}
+                {(props.path === pageURI) ? (<span className="sr-only">(current)</span>) : ''}
+            </a>
+        </li>
+    );
 }
-    
-`;
 
-const StyleUl = styled.ul`
-    list-style-type: none;   
-    margin: 0;
-`;
 
-const ListIndex = styled.li`
-    display: inline-block;
-    margin-right: 20px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-@media screen and (max-width: 650px) {
-        font-size:5px;
-}
-`;
+class Navigation extends React.Component {
 
-class Header extends React.Component {
     render() {
         return (
-            <HeaderStyled>
-                <Container fluid>
-                    <Row>
-                        <Col xs={12} sm={1}>
-                            <h4 style={{margin: "0px", color: "white"}}>LOGO</h4>
-                        </Col>
-                        <Col xs={12} sm={10}>
-                            <StyleUl>
-                                <ListIndex>Текст</ListIndex>
-                                <ListIndex>Текст</ListIndex>
-                                <ListIndex>Текст</ListIndex>
-                                <ListIndex>Текст</ListIndex>
-                                <ListIndex>Текст</ListIndex>
-                            </StyleUl>
-                        </Col>
-                        <Col xs={6} sm={1}>
-                            <ModalButton/>
-                        </Col>
-                    </Row>
-                </Container>
-            </HeaderStyled>
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="container-fluid">
+                <a className="navbar-brand" id="brand" href="/">LOGO</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <NavItem path="/" name="Home"/>
+                        <NavItem path="/page2" name="About"/>
+                        <NavItem path="/page3" name="Galeri"/>
+                        <NavItem path="/page3" name="Contact"/>
+                    </ul>
+                    <div className="col-md-1">
+                        <ModalButton/>
+                    </div>
+                </div>
+                </div>
+            </nav>
         )
     }
 }
 
-export default Header;
+export default Navigation;

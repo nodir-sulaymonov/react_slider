@@ -9,6 +9,16 @@ const Wrapper = styled.div`
    display: flex;
    height: 80vh;
    margin: 10px;
+   @media screen and (max-width: 1200px) {
+        width:100%;
+        display: flex;
+        height: 50vh;
+}
+@media screen and (max-width: 750px) {
+        width:100%;
+        display: flex;
+        height: 80vh;
+}
 `;
 const ListPlayer = () => {
     const params = {
@@ -24,13 +34,12 @@ const ListPlayer = () => {
     return (
         <Wrapper>
             <Swiper {...params}>
-                <div className="slideItem">Slide #1</div>
-                <div className="slideItem">Slide #2</div>
-                <div className="slideItem">Slide #3</div>
-                <div className="slideItem">Slide #4</div>
-                <div className="slideItem">Slide #5</div>
-                <div className="slideItem">Slide #6</div>
-                
+                <div id="slideItem">Slide #1</div>
+                <div id="slideItem">Slide #2</div>
+                <div id="slideItem">Slide #3</div>
+                <div id="slideItem">Slide #4</div>
+                <div id="slideItem">Slide #5</div>
+                <div id="slideItem">Slide #6</div>
             </Swiper>
         </Wrapper>
     )

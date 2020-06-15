@@ -4,6 +4,7 @@ import styled from "styled-components";
 import './index.css';
 import Button from "react-bootstrap/Button";
 
+
 const WrapperModel = styled.div`
     display: flex;
     flex-direction: column;
@@ -34,8 +35,7 @@ export default class Examples extends Component {
 
     render() {
         return (
-            <section>
-                <Button variant="secondary" ovalue="Open" onClick={() => this.openModal()}>Primary</Button>
+            <div className="row">
                 <Modal
                     visible={this.state.visible}
                     width="400"
@@ -45,13 +45,14 @@ export default class Examples extends Component {
                     onClickAway={() => this.closeModal()}
                 >
                     <WrapperModel>
-                        <h1>Войдите удобным способом</h1>
+                        <h2>Войдите удобным способом</h2>
                         <button className="buttonModal">Email</button>
                         <button className="buttonModal">ВКонтакте</button>
                         <button className="buttonModal">Facebook</button>
                     </WrapperModel>
                 </Modal>
-            </section>
+                <Button variant="secondary" ovalue="Open" onClick={() => this.openModal()}>Primary</Button>
+            </div>
         );
     }
 }

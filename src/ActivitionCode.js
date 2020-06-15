@@ -2,18 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import './index.css';
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import {Form} from "react-bootstrap";
 
 const Wrapper = styled.div`
     margin: 10%;
     text-align: center;
+    @media screen and (max-width: 1200px) {
+        margin-top:20%;
+}
+@media screen and (max-width: 940px) {
+          margin-top:10%;
+}
 `;
 
 const BannerStyled = styled.div`
     font-size: 80px;
     font-weight: bold;
+    @media screen and (max-width: 1180px) {
+        font-size:50px;
+}
     @media screen and (max-width: 650px) {
         font-size:35px;
 }
@@ -46,7 +53,7 @@ class ActivitionCode extends React.Component {
                         </BannerStyled>
                         <Form onSubmit={this.onSubmit}>
                             <div className="form-row">
-                                <div className="form-group col-md-6" >
+                                <div className="form-group col-lg-6" >
                                     <input
                                         type="text"
                                         name="code"
@@ -56,7 +63,7 @@ class ActivitionCode extends React.Component {
                                         onChange={this.handleThemeChange}
                                     />
                                 </div>
-                                <div className="form-group col-md-6">
+                                <div className="form-group col-lg-6">
                                     <button className="activation" type="submit">Продолжить</button>
                                 </div>
                             </div>

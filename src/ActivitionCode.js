@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 @media screen and (max-width: 940px) {
           margin-top:10%;
 }
+
 `;
 
 const BannerStyled = styled.div`

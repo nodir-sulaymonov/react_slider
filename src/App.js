@@ -11,12 +11,14 @@ function App() {
         <div>
             <Header/>
             <section>
-                <div className="row">
-                    <div className="col-lg-6">
-                        <ActivitionCode/>
-                    </div>
-                    <div className="col-lg-6">
-                        <ListPlayer/>
+                <div class="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <ActivitionCode/>
+                        </div>
+                        <div className="col-lg-6">
+                            <ListPlayer/>
+                        </div>
                     </div>
                 </div>
             </section>

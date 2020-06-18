@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: "Roboto";
 }
 
 input {
@@ -50,32 +51,6 @@ input {
     align-items: center;
     justify-content: center;
     width: 500px;
-
-
-}
-@media screen and (max-width: 1180px) {
-    #slideItem{
-        margin: 5px;
-        width: 400px;
-    }
-    input{
-        width: 150px;
-    }
-    .activation{
-        width: 150px;
-    }
-}
-@media screen and (max-width: 986px) {
-    #slideItem{
-        width: 300px;
-        height: 250px;
-    }
-    input{
-        width: 200px;
-    }
-    .activation{
-        width: 200px;
-    }
 }
 
 nav{
@@ -88,4 +63,68 @@ nav{
 }
 .navbar-collapse{
     padding-left: 30px;
+}
+
+.title_name{
+    margin-top: 100px;
+    font-size: 60px;
+    color: white;
+    width: 700px;
+}
+.footer_text{
+    color: white;
+    font-size: 16px;
+    width: 700px;
+}
+@media screen and (max-width: 1180px) {
+    #slideItem{
+        margin: 5px;
+        width: 400px;
+    }
+    input{
+        width: 150px;
+    }
+    .activation{
+        width: 150px;
+    }
+    .title_name{
+        font-size: 40px;
+        width: 100%;
+    }
+    .footer_text{
+        width: 100%;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #slideItem{
+        width: 300px;
+        height: 250px;
+    }
+    input{
+        width: 200px;
+    }
+    .activation{
+        width: 200px;
+    }
+    .title_name{
+        margin: 50px auto;
+        font-size: 50px;
+        width: 90%;
+    }
+    .footer_text{
+        width: 90%;
+        font-size: 18px;
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    .title_name{
+        margin: 30px auto;
+        font-size: 30px;
+        width: 100%;
+    }
+}
+.bg-light{
+    border-radius: 4px;
 }

@@ -5,19 +5,20 @@ import './index.css';
 import 'swiper/css/swiper.css'
 
 const Wrapper = styled.div`
-   width: 100%;
+   margin-top: 10px;
    display: flex;
+   width: 100%;
    height: 80vh;
-   margin: 10px;
    @media screen and (max-width: 1200px) {
         width:100%;
         display: flex;
-        height: 50vh;
+        height: 75vh;
 }
 @media screen and (max-width: 750px) {
         width:100%;
         display: flex;
         height: 80vh;
+        margin:0;
 }
 `;
 const ListPlayer = () => {

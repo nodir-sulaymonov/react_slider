@@ -1,47 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "react-bootstrap/Container";
+import "./index.css";
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-direction: column;
     background-color: #229FFF;
     margin: 5%;
     height: 80vh;
     border-radius: 50px;
-`;
-
-const InsideWrapper = styled.div`
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin-left: 10%;
-    margin-top: 5%;
-    @media screen and (max-width: 750px) {
-        width: auto;
-        text-align: center;
-        margin: 10%
+    @media screen and (max-width: 1100px) {
+     height: 50vh;
+     margin: 5%;
 }
-   
 `;
 
-const P = styled.div`
-    font-size: 65px;
-    font-family: system-ui;
-    font-weight: 600;
-`;
-const Small = styled.div`
-    font-size: 25px;
-    font-family: serif;
-`;
-class FooterBanner extends React.Component{
+
+class FooterBanner extends React.Component {
     render() {
         return (
             <Wrapper>
-                <InsideWrapper>
-                    <P>Звук - это музыка для каждого момента в жизни.</P>
-                    <Small>Тысячи готовых плейлистов, чарты и персональные рекомендации для разных ситуаций, занятий и настроений собраны в удобном приложение и нас сайте. </Small>
-                </InsideWrapper>
+                <Container>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="title_name">Звук - это музыка для каждого момента в жизни.</h1>
+                            <p class="footer_text">Тысячи готовых плейлистов, чарты и персональные рекомендации для разных ситуаций, занятий
+                                и настроений собраны в удобном приложение и нас сайте.
+                            </p>
+                        </div>
+                    </div>
+                </Container>
             </Wrapper>
         )
     }

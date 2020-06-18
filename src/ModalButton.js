@@ -35,24 +35,30 @@ export default class Examples extends Component {
 
     render() {
         return (
-            <div className="row">
-                <Modal
-                    visible={this.state.visible}
-                    width="400"
-                    border-radius="10"
-                    height="400"
-                    effect="fadeInDown"
-                    onClickAway={() => this.closeModal()}
-                >
-                    <WrapperModel>
-                        <h2>Войдите удобным способом</h2>
-                        <button className="buttonModal">Email</button>
-                        <button className="buttonModal">ВКонтакте</button>
-                        <button className="buttonModal">Facebook</button>
-                    </WrapperModel>
-                </Modal>
-                <Button variant="secondary" ovalue="Open" onClick={() => this.openModal()}>Primary</Button>
+            <div class="container">
+                <div className="row">
+                    <Modal
+                        visible={this.state.visible}
+                        width="400"
+                        border-radius="10"
+                        height="400"
+                        effect="fadeInDown"
+                        onClickAway={() => this.closeModal()}
+                    >
+                        <WrapperModel>
+                            <h2>Войдите удобным способом</h2>
+                            <button className="buttonModal">Email</button>
+                            <button className="buttonModal">ВКонтакте</button>
+                            <button className="buttonModal">Facebook</button>
+                        </WrapperModel>
+                    </Modal>
+                    <div className="bg-light">
+                        <Button variant="btn btn-outline-primary" ovalue="Open"
+                                onClick={() => this.openModal()}>Primary</Button>
+                    </div>
+                </div>
             </div>
+
         );
     }
 }
